@@ -11,10 +11,10 @@
 </head>
 <body>
     <article>
-        <div class="card_container" data-testid="test-profile-card">
+        <div class="card-container" data-testid="test-profile-card">
             <header>
                 <div class="avatar-image">
-                    <img src="./albert.jpg" alt="Portrait of Ted" data-testid="test-user-avatar"> 
+                    <img class="avatar-main-img" src="./teddy.jpg" alt="Portrait of Ted" data-testid="test-user-avatar"> 
                 </div>
                 <h2 class="name" data-testid="test-user-name">
                     Ted Lasso
@@ -27,41 +27,47 @@
                     </p>
                 </div>
             </section>
+            <br>
+            <br>
             <footer>
-                <div class="social-links" data-testid="user-social-links">
+                <h3>You check and follow me through these links:</h3>
+                <div class="social-links" data-testid="test-user-social-links">
                     <div class="instagram">
-                        <a href="" data-testid="test-user-social-instagram">
+                        <a href="" target="_blank" rel="noopener noreferer"  data-testid="test-user-social-instagram">
                             <img src="./instagram-brands-solid-full.svg" alt="">
                         </a>
                     </div>
                     <div class="twitter">
-                        <a href="" data-testid="test-user-social-twitter">
+                        <a href="" target="_blank" rel="noopener noreferer" data-testid="test-user-social-twitter">
                             <img src="./x-twitter-brands-solid-full.svg" alt="">
                         </a>
                     </div>
                     <div class="discord">
-                        <a href="" data-testid="test-user-social-discord">
+                        <a href="" target="_blank" rel="noopener noreferer" data-testid="test-user-social-discord">
                             <img class="card-img" src="./discord-brands-solid-full.svg" alt="">
                         </a>
                     </div>
                     </div>
-                    <div class="hobbies" >
-                        <h4>Hobbies</h4>
-                        <ul data-testid="test-user-hobbies">
-                            <li>Playing Chess.</li>
-                            <li>Travelling, especially new places.</li>
-        
-                        </ul>
+                    <div class="hobs-dis">
+                        <div class="hobbies" >
+                            <h4>Hobbies</h4>
+                            <ul data-testid="test-user-hobbies">
+                                <li>Playing Chess.</li>
+                                <li>Travelling, especially new places.</li>
+            
+                            </ul>
+                        </div>
+                        <div class="dislikes">
+                            <h4>Dislikes</h4>
+                            <ul data-testid="test-user-dislikes">
+                                <li>Cold early mornings.</li>
+                                <li>Noise.</li>
+                                <li>Broken promises.</li>
+                        
+                            </ul>
+                        </div>
                     </div>
-                    <div class="dislikes">
-                        <h4>Dislikes</h4>
-                        <ul data-testid="test-user-dislikes">
-                            <li>Cold early mornings.</li>
-                            <li>Noise.</li>
-                            <li>Broken promises.</li>
                     
-                        </ul>
-                    </div>
                 </div>
             </footer>
             
