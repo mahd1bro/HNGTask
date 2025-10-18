@@ -5,22 +5,6 @@
     box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    margin: 20px 0;
-    gap: 25px;
-}
-
-.name {
-    margin-top: 10px;
-    padding: 20px 30px;
-    font-size: 2rem;
-    height: fit-content;
-}
-
-
 .card-container {
     align-items: center;
     margin: 100px auto;
@@ -34,10 +18,38 @@ header {
     box-shadow: 10px 10px 4px lightblue;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 25px;
+}
+
+.name {
+    margin-top: 10px;
+    padding: 20px 30px;
+    font-size: 2rem;
+    height: fit-content;
+}
+
+.user-time {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+  padding: 15px 20px;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  border: 0.5px ridge lightblue;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px lightblue;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
 .avatar-image {
   width: 250px;
   height: 250px;
-  /* border: 2px ridge gray; */
+  border: 0.5px ridge lightblue; 
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
@@ -97,9 +109,11 @@ footer {
     
 }
 
-a:focus {
+a:focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 2px;
     outline: lightblue;
-    border-radius: 3px;
+    border-radius: 4px;
     transition: 0.2s ease;
 }
 

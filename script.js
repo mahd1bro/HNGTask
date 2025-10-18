@@ -1,7 +1,7 @@
 // Display current timestamp
-const timeElement = document.querySelector('[data-testid="test-profile-card"]');
+const timeElement = document.querySelector('[data-testid="test-user-time"]');
 if (timeElement) {
-  timeElement.textContent = Date.now().toString();
+  timeElement.textContent = Date.now().toLocaleString();
 }
 
 // Verify avatar attributes (optional test logging)
@@ -11,11 +11,11 @@ if (avatar) {
 }
 
 // Ensure all social links exist and have href attributes
-const socialLinks = document.querySelector('[data-testid="user-social-links"]');
+const socialLinks = document.querySelector('[data-testid="test-user-social-links"]');
 if (socialLinks) {
   const links = socialLinks.querySelectorAll('a');
   links.forEach(link => {
-    if (!link.hasAttribute('href') || link.getAttribute('href') === "") {
+    if (!link.hasAttribute('href')) {
       console.warn("Missing href in social link:", link);
     }
   });
