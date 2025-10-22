@@ -14,33 +14,37 @@
         <h2 class="header">
             Contact Me
         </h2>
-        <form>
+        <form id="contact-form">
             <div class="fullname">
-                <label for="">Full name:</label>
-                <input type="text" data-testid="test-contact-name" placeholder="Your fullname">
+                <label for="name">Full name:</label>
+                <input type="text" id="name" data-testid="test-contact-name" placeholder="Your fullname" required aria-describedby="name-error">
+                <span id="name-error" class="error-message" aria-live="polite"></span>
             </div>
             <div class="email">
-                <label for="">E-mail:</label>
-                <input type="text" data-testid="test-contact-email" placeholder="Your email">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" data-testid="test-contact-email" placeholder="Your email" required aria-describedby="email-error">
+                <span id="email-error" class="error-message" aria-live="polite"></span>
             </div>
             <div class="subject">
-                <label for="">Subject:</label>
-                <input type="text" data-testid="test-contact-subject" placeholder="Purpose of your message">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" data-testid="test-contact-subject" placeholder="Purpose of your message" required aria-describedby="subject-error">
+                <span id="subject-error" class="error-message" aria-live="polite"></span>
             </div>
             <div class="message">
-                <label for="">Write your message:</label>
-                <textarea name="" minlength="10" data-testid="test-contact-message" id="message"></textarea>
+                <label for="message">Write your message:</label>
+                <textarea id="message" minlength="10" data-testid="test-contact-message" required aria-describedby="message-error"></textarea>
+                <span id="message-error" class="error-message" aria-live="polite"></span>
             </div>
             <div class="submit" data-testid="test-contact-submit">
-                <button>submit</button>
+                <button type="submit">submit</button>
             </div>
-            
         </form>
         <br>
         <br>
         <p class="dashboard">
             <a href="./index.html">Back to dashboard</a>
         </p>
+        <p id="confirmation-message" role="status" aria-live="polite" style="display:none; color:green; margin-top:15px;"></p>
     </div>
     <script src="./script.js"></script>
 </body>

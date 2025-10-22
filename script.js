@@ -4,7 +4,7 @@ if (timeElement) {
   timeElement.textContent = Date.now().toLocaleString();
 }
 
-// Verify avatar attributes (optional test logging)
+// Verify avatar attributes 
 const avatar = document.querySelector('[data-testid="test-user-avatar"]');
 if (avatar) {
   console.log("Avatar found with alt:", avatar.alt);
@@ -46,5 +46,49 @@ if (hobbiesList && dislikesList) {
   console.log("Both hobbies and dislikes lists are present.");
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const confirmation = document.getElementById("confirmation-message");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    
+    document.querySelectorAll("error-message").forEach(msg => msg.textContent = "");
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+  
+    if (!name.value.trim()) {
+      document.getElementById("name-error").textContent = "Please enter your full name.";
+      name.focus();
+      valid = false;
+    } else if (!email.value.includes("@") || !email.value.includes(".")) {
+      document.getElementById("email-error").textContent = "Please enter a valid email (name@example.com).";
+      email.focus();
+      valid = false;
+    } else if (!subject.value.trim()) {
+      document.getElementById("subject-error").textContent = "Subject is required.";
+      subject.focus();
+      valid = false;
+    } else if (!message.value.trim()) {
+      document.getElementById("message-error").textContent = "Message cannot be empty.";
+      message.focus();
+      valid = false;
+    }
+
+    // If valid, show success message
+    if (valid) {
+      confirmation.style.display = "block";
+      confirmation.style.color = "green";
+      confirmation.textContent = "Thank you! Your message has been sent successfully.";
+      form.reset();
+    }
+  });
+});
 
 
